@@ -1,0 +1,238 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: radial-gradient(circle, #00CED1, #3c5a80);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3c5a80;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.loginbutton {
+    font-family: Arial, sans-serif;
+    color: #14396A;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+    position: absolute;
+    right: 20px;
+}
+
+.loginbutton:hover {
+    background: linear-gradient(to top, #468CCF, #63B8EE);
+    color: #14396A;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #999;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Box styles */
+.box {
+    margin: 4rem auto;
+    width: 30%;
+    padding: 1rem;
+    text-align: left; /* Alinha o texto à esquerda */
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-shadow {
+    width: 30%;
+    height: 70%;
+    background-color: #3c5a80;
+    box-shadow: 3px 3px 11px 5px rgba(124, 172, 222, 1);
+}
+
+.box-content {
+    position: absolute;
+    top: 26%;
+    left: 5%;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.image-content {
+    width: 35%;
+}
+
+.header {
+    margin: 0;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .box {
+        width: 90%; 
+        padding: 1rem;
+    }
+
+    .box-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        text-align: center; 
+    }
+
+    .modal-content {
+        width: 90%; 
+    }
+    .addbutton {
+        margin: 10px 0; 
+        width: 100%; 
+    }
+
+    .testbutton {
+        margin: 10px 0; 
+        width: 100%; 
+    }
+}
+
+/* Button styles */
+.addbutton {
+    font-family: Arial, sans-serif;
+    color: #F8F8FF
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 30px;
+    background: #008080;
+    margin-right: 10px; /* Adicionado espaçamento entre os botões */
+}
+
+.addbutton:hover {
+    background: linear-gradient(to top, #008080, #87CEFA);
+    color: #14396A;
+}
+.testbutton {
+    font-family: Arial, sans-serif;
+    color: #F8F8FF;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 30px;
+    background:  #468CCF;
+    margin-right: 10px; /* Adicionado espaçamento entre os botões */
+}
+
+.testbutton:hover {
+    background: linear-gradient(to top, #468CCF, #63B8EE);
+    color: #14396A;
+}
